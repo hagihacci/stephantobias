@@ -179,7 +179,7 @@ function App() {
                   </div>
                 </Reveal>
                 <Reveal delay={0.1}>
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05] mb-5 whitespace-nowrap">
+                  <h1 className="text-[clamp(1.6rem,6vw,3.75rem)] font-bold tracking-tight leading-[1.1] mb-5">
                     we don't design websites.<br />
                     <span>we design decisions.</span>
                   </h1>
@@ -290,7 +290,7 @@ function App() {
 
               {/* Portrait */}
               <Reveal width="100%">
-                <div className="overflow-hidden rounded-2xl ml-auto" style={{ background: '#b8732a', width: '70%' }}>
+                <div className="overflow-hidden rounded-2xl mx-auto md:ml-auto md:mr-0" style={{ background: '#b8732a', width: '70%' }}>
                   <img
                     src="/me.png"
                     alt="Tobias Stephan"
@@ -331,7 +331,7 @@ function App() {
                 </Reveal>
 
                 <Reveal delay={0.2}>
-                  <div className="grid grid-cols-2 gap-6 mb-10">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
                     <div>
                       <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#0a0a0a] mb-3">Specialties</p>
                       <ul className="space-y-1.5">
@@ -449,7 +449,7 @@ function App() {
                     Ausgangslage, Annahmen, Wahrnehmung — erst wenn dieser Weg klar gestaltet ist, entsteht eine Entscheidung. Nicht zufällig.
                   </p>
                 </div>
-                <div className="w-full md:w-3/5" style={{ height: '234px' }}>
+                <div className="w-full md:w-3/5" style={{ height: 'clamp(160px, 38vw, 234px)' }}>
                   <DecisionGraph />
                 </div>
               </div>
@@ -591,14 +591,14 @@ function App() {
         <div className="px-8 md:px-16 pt-16 pb-8 relative z-10">
           <a
             href="mailto:tobias@stephantobias.com"
-            className="block text-3xl md:text-5xl lg:text-6xl font-bold text-[#0a0a0a] leading-tight hover:text-[#2a9d8f] transition-colors duration-500"
+            className="block text-lg sm:text-2xl md:text-4xl lg:text-6xl font-bold text-[#0a0a0a] leading-tight hover:text-[#2a9d8f] transition-colors duration-500 break-all"
           >
             tobias@stephantobias.com
           </a>
           <p className="text-[#a1a1aa] text-sm mt-4 italic">we design decisions.</p>
 
           {/* Social icons */}
-          <div className="flex items-center gap-5 mt-10">
+          <div className="flex items-center gap-5 mt-10 flex-wrap">
             <a href="https://linkedin.com/in/tobias-stephan" target="_blank" rel="noopener noreferrer"
               className="w-9 h-9 rounded-full border border-[#e4e4e7] flex items-center justify-center text-[#a1a1aa] hover:text-[#0a0a0a] hover:border-[#0a0a0a] transition-all">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
@@ -611,6 +611,13 @@ function App() {
                 <rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
               </svg>
             </a>
+          </div>
+
+          {/* Mobile legal links */}
+          <div className="flex md:hidden items-center gap-6 mt-8 text-xs text-[#a1a1aa]">
+            <Link to="/impressum" className="hover:text-[#0a0a0a] transition-colors uppercase tracking-wider">Impressum</Link>
+            <Link to="/datenschutz" className="hover:text-[#0a0a0a] transition-colors uppercase tracking-wider">Datenschutz</Link>
+            <span>© {new Date().getFullYear()} Tobias Stephan</span>
           </div>
         </div>
 

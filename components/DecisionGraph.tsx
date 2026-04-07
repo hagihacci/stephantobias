@@ -63,7 +63,7 @@ export function DecisionGraph() {
   const cy = (r: { y: number; h: number }) => r.y + r.h / 2;
 
   return (
-    <svg viewBox="0 0 740 300" className="w-full h-full" preserveAspectRatio="xMaxYMid meet" style={{ overflow: 'visible', maxHeight: '100%' }}>
+    <svg viewBox="0 0 740 300" className="w-full h-full" preserveAspectRatio="xMidYMid meet" style={{ overflow: 'visible', maxHeight: '100%' }}>
       <defs>
         <filter id="badge-shadow" x="-20%" y="-40%" width="140%" height="180%">
           <feDropShadow dx="0" dy="2" stdDeviation="5" floodColor="#000" floodOpacity="0.08" />
