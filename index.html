@@ -82,6 +82,15 @@
 
     * { box-sizing: border-box; }
 
+    @media (max-width: 767px) {
+      h1 {
+        font-size: clamp(1.25rem, 5vw, 2rem) !important;
+        word-break: break-word !important;
+        overflow-wrap: break-word !important;
+        white-space: normal !important;
+      }
+    }
+
     html { scroll-behavior: auto; }
 
     body {
@@ -107,7 +116,6 @@
   <link rel="modulepreload" crossorigin href="/assets/framer-508twJ7g.js">
   <link rel="modulepreload" crossorigin href="/assets/three-BEUVKCl7.js">
   <link rel="stylesheet" crossorigin href="/assets/index-UsTG9zoL.css">
-<!-- build:fix-mobile -->
 </head>
 <body>
   <div id="root"></div>
