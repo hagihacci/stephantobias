@@ -112,15 +112,24 @@
     ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
     ::-webkit-scrollbar-thumb:hover { background: #d4d4d8; }
 
+    /* Three.js hero animation — float keyframe */
+    @keyframes heroFloat {
+      0%   { transform: translateY(0px) translateX(0px); }
+      30%  { transform: translateY(-18px) translateX(6px); }
+      60%  { transform: translateY(-8px) translateX(-8px); }
+      100% { transform: translateY(0px) translateX(0px); }
+    }
+
     /* Three.js hero animation — responsive positioning */
     .three-hero-container {
       position: absolute;
-      top: 56px; /* below navbar */
+      top: 56px;
       right: 0;
       bottom: 0;
       left: 35%;
       pointer-events: none;
       opacity: 1;
+      animation: heroFloat 9s ease-in-out infinite;
     }
     .three-hero-container canvas {
       width: 100% !important;
@@ -130,21 +139,22 @@
     @media (max-width: 767px) {
       .three-hero-container {
         position: absolute;
-        top: auto;
+        top: 56px;
+        right: -10vw;
         left: auto;
-        bottom: 0;
-        right: 0;
-        width: 75vw;
-        height: 45vh;
-        opacity: 0.35;
+        bottom: auto;
+        width: 80vw;
+        height: 55vw;
+        opacity: 0.3;
+        animation: heroFloat 9s ease-in-out infinite;
       }
     }
   </style>
-  <script type="module" crossorigin src="/assets/index-DHk-QRsY.js"></script>
+  <script type="module" crossorigin src="/assets/index-lGU_Y5e9.js"></script>
   <link rel="modulepreload" crossorigin href="/assets/react-vendor-AwJo_wQW.js">
   <link rel="modulepreload" crossorigin href="/assets/framer-508twJ7g.js">
   <link rel="modulepreload" crossorigin href="/assets/three-BEUVKCl7.js">
-  <link rel="stylesheet" crossorigin href="/assets/index-DKv5txJ0.css">
+  <link rel="stylesheet" crossorigin href="/assets/index-DokNQ5KG.css">
 </head>
 <body>
   <div id="root"></div>
