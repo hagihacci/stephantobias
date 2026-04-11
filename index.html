@@ -129,6 +129,7 @@
       left: 35%;
       pointer-events: none;
       opacity: 1;
+      z-index: 0;
       animation: heroFloat 9s ease-in-out infinite;
     }
     .three-hero-container canvas {
@@ -139,13 +140,13 @@
     @media (max-width: 767px) {
       .three-hero-container {
         position: absolute;
-        top: 56px;
-        right: -10vw;
-        left: auto;
-        bottom: auto;
-        width: 80vw;
-        height: 55vw;
-        opacity: 0.3;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.18;
         animation: heroFloat 9s ease-in-out infinite;
       }
     }
